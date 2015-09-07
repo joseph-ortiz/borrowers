@@ -1,12 +1,12 @@
 <form {{action "save" on="submit"}}>
 	<h2>{{errorMessage}}</h2>
 	<fieldset>
-		{{input value=model.firstName}}
-		{{input value=model.lastName}}
-		{{input value=model.email}}
-		{{input value=model.twitter}}
-		{{input type="checkbox" name=trusted}}
+		{{input value=model.firstName placeholder="first name"}}
+		{{input value=model.lastName placeholder="last name"}}
+		{{input value=model.email placeholder="email"}}
+		{{input value=model.twitter
+		placeholder="twitter"}}
 	</fieldset>
-	<input type="submit" value="Save" class="primary" />
+	<input type="submit" value="Save" class="primary">
 	<button {{action "cancel"}}> Cancel</button>
 </form>

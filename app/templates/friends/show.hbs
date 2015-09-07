@@ -1,12 +1,13 @@
 <div class="friend-profile">
-	
+	<p> First Name: {{model.firstName}} </p>
+	<p> Last Name: {{model.lastName}} </p>
+	<p> Email: {{model.email}} </p>
+	<p> Twitter: {{model.twitter}} </p>
+	<p> {{ link-to "Lend article" "articles.new" }} </p>
+	<p> {{ link-to "Edit-info" "friends.edit" model }} </p>
+	<p><a href="#" {{action "delete" model}}> Delete</a></p>	
 </div>	
-	<p> First Name: {{model.firstName}} </p>>
-	<p> Last Name: {{model.lastName}} </p>>
-	<p> Email: {{model.email}} </p>>
-	<p> Twitter: {{model.twitter}} </p>>
-	<p> {{link-to "Edit-info" "friends.edit" model}}</p>>
-	<p><a href="#" {{action "delete" model}}> Delete</a></p>
-{{#link-to 'friends.index'}}
-back to friends
-{{/link-to}}
+<div class="articles-container">
+	{{outlet}}
+</div>
+
